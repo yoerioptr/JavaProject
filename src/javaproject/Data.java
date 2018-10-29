@@ -21,8 +21,8 @@ public class Data {
         Row.addElement("Text 1");
         Row.addElement(123);
         Row.addElement(true);
-        Row.addElement(Color.red);
-        Row.addElement(new Photo("hondje.jpg"));
+        Row.addElement(Color.lightGray);
+        Row.addElement(new Photo("baloons.jpg"));
         Table.addElement(Row);
         
         Row = new Vector();
@@ -30,7 +30,7 @@ public class Data {
         Row.addElement(456);
         Row.addElement(false);
         Row.addElement(Color.red);
-        Row.addElement(new Photo("lelijk.jpg"));
+        Row.addElement(new Photo("flower.jpg"));
         Table.addElement(Row);
     }
     

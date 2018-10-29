@@ -5,6 +5,9 @@
  */
 package javaproject;
 
+import javaproject.renderers.ColorRenderer;
+import java.awt.Color;
+import javaproject.editors.ColorEditor;
 import javax.swing.table.TableModel;
 
 /**
@@ -25,6 +28,8 @@ public class tableJFrame extends javax.swing.JFrame {
        myTableModel.setData(data);
         
        initComponents();
+       jTable.setDefaultRenderer(Color.class, new ColorRenderer(false));
+       jTable.setDefaultEditor(Color.class, new ColorEditor());
        
        jTable.setRowHeight(50);
     }

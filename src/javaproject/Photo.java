@@ -15,9 +15,9 @@ import javax.swing.ImageIcon;
  * @author Yoeri
  */
 public class Photo {
-    String Location = "C:\\Users\\Yoeri\\Pictures\\";
-    Image Img;
-    Image Thumbnail;
+    public String Location = "C:\\Users\\Yoeri\\Pictures\\JavaProject";
+    public Image Img;
+    public Image Thumbnail;
     
     public Photo(String fileName) {
         read(Location + fileName);
