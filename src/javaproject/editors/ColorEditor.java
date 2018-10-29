@@ -66,5 +66,4 @@ public class ColorEditor extends AbstractCellEditor implements TableCellEditor, 
     public void setVisible() {
         dialog.setVisible(true);
     }
-    
 }

@@ -21,5 +21,4 @@ public class JavaProject {
         JFrame tableJFrame = new tableJFrame();
         tableJFrame.setVisible(true);
     }
-    
 }
