@@ -5,9 +5,10 @@
  */
 package javaproject;
 
-import javaproject.renderers.ColorRenderer;
+import javaproject.renderers.CustomRenderer;
 import java.awt.Color;
 import javaproject.editors.ColorEditor;
+import javaproject.editors.PhotoEditor;
 import javax.swing.table.TableModel;
 
 /**
@@ -28,8 +29,10 @@ public class tableJFrame extends javax.swing.JFrame {
        myTableModel.setData(data);
         
        initComponents();
-       jTable.setDefaultRenderer(Color.class, new ColorRenderer(false));
+       jTable.setDefaultRenderer(Color.class, new CustomRenderer(false));
        jTable.setDefaultEditor(Color.class, new ColorEditor());
+       jTable.setDefaultRenderer(Photo.class, new CustomRenderer(false));
+       jTable.setDefaultEditor(Photo.class, new PhotoEditor());
        
        jTable.setRowHeight(50);
     }

@@ -15,7 +15,7 @@ import javax.swing.ImageIcon;
  * @author Yoeri
  */
 public class Photo {
-    public String Location = "C:\\Users\\Yoeri\\Pictures\\JavaProject";
+    public String Location = "C:\\Users\\Yoeri\\Pictures\\JavaProject\\";
     public Image Img;
     public Image Thumbnail;
     
@@ -27,7 +27,7 @@ public class Photo {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void read(String filePath) {
+    public void read(String filePath) {
         try {
             Img = ImageIO.read(new File(filePath));
             Thumbnail = getScaledPhoto(50);

@@ -19,12 +19,12 @@ import javax.swing.table.TableCellRenderer;
  *
  * @author Yoeri
  */
-public class ColorRenderer extends JLabel implements TableCellRenderer {
+public class CustomRenderer extends JLabel implements TableCellRenderer {
     Boolean isBordered = true;
     Color color;
     Border selectedBorder, unselectedBorder;
 
-    public ColorRenderer(boolean isBordered){
+    public CustomRenderer(boolean isBordered){
         this.isBordered = isBordered;
         setOpaque(true);
     }
