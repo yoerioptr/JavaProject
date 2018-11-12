@@ -22,7 +22,7 @@ public class Data {
         Row.addElement(123);
         Row.addElement(true);
         Row.addElement(Color.lightGray);
-        Row.addElement(new Photo("baloons.jpg"));
+        Row.addElement(new Photo("blue.jpg"));
         Table.addElement(Row);
         
         Row = new Vector();
@@ -30,7 +30,7 @@ public class Data {
         Row.addElement(456);
         Row.addElement(false);
         Row.addElement(Color.red);
-        Row.addElement(new Photo("flower.jpg"));
+        Row.addElement(new Photo("pink.jpg"));
         Table.addElement(Row);
     }
     

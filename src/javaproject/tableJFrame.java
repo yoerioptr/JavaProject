@@ -7,6 +7,7 @@ package javaproject;
 
 import javaproject.renderers.CustomRenderer;
 import java.awt.Color;
+import javaproject.azure.Azure;
 import javaproject.editors.ColorEditor;
 import javaproject.editors.PhotoEditor;
 import javax.swing.table.TableModel;
@@ -35,6 +36,17 @@ public class tableJFrame extends javax.swing.JFrame {
        jTable.setDefaultEditor(Photo.class, new PhotoEditor());
        
        jTable.setRowHeight(50);
+       
+       String hostname = "ittoolsiot.database.windows.net";
+       String databaseName = "Java_Project";
+       String server = "ittoolsiot";
+       String username = "r0663911";
+       String password = "WkZ5rb>5_m!Nk3;t";
+       
+       Azure azure;
+       azure = new Azure(hostname, databaseName, server, username, password);
+       boolean state = azure.Connect();
+       return;
     }
 
     /**
