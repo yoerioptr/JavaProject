@@ -6,7 +6,12 @@
 package javaproject;
 
 import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
@@ -18,6 +23,7 @@ public class Photo {
     public String Location = "C:\\Users\\Yoeri\\Pictures\\JavaProject\\";
     public Image Img;
     public Image Thumbnail;
+    private File imageFile;
     
     public Photo(String fileName) {
         read(Location + fileName);
@@ -28,8 +34,9 @@ public class Photo {
     }
 
     public void read(String filePath) {
+        imageFile = new File(filePath);
         try {
-            Img = ImageIO.read(new File(filePath));
+            Img = ImageIO.read(imageFile);
             Thumbnail = getScaledPhoto(50);
         } catch (Exception e) {
             System.out.println(e.toString());
@@ -56,5 +63,18 @@ public class Photo {
         }
         
         return imgThumb;
+    }
+    
+    public byte [] getPhotoByteArray() {
+        try {
+            BufferedImage img = ImageIO.read(imageFile);
+            ByteArrayOutputStream output = new ByteArrayOutputStream();
+            ImageIO.write(img, "jpg", output);
+            return output.toByteArray();
+            
+        } catch (IOException ex) {
+            Logger.getLogger(Photo.class.getName()).log(Level.SEVERE, null, ex);
+            return null;
+        }
     }
 }
