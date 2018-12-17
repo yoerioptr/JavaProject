@@ -5,8 +5,10 @@
  */
 package javaproject.connection;
 
+import java.awt.Cursor;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.Statement;
 
 
@@ -52,5 +54,19 @@ public class DatabaseConnection {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    
+    public ResultSet excecuteQuery(String query) {
+        ResultSet rs = null;
+        
+        try {
+            Statement statement = connection.createStatement();
+            rs = statement.executeQuery(query);
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        return rs;
     }
 }

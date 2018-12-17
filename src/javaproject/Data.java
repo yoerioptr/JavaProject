@@ -6,32 +6,27 @@
 package javaproject;
 
 import java.awt.Color;
+import java.util.ArrayList;
 import java.util.Vector;
+import javaproject.helpers.DatabaseHelper;
 
 /**
  *
  * @author Yoeri
  */
 public class Data {
+    private DatabaseHelper databaseHelper;
     Vector Row;
     Vector Table = new Vector();
     
     public void makeData() {
-        Row = new Vector();
-        Row.addElement("Text 1");
-        Row.addElement(123);
-        Row.addElement(true);        
-        Row.addElement(Color.lightGray);
-        Row.addElement(new Photo("1.jpg"));
-        Table.addElement(Row);
+        databaseHelper = new DatabaseHelper();
         
-        Row = new Vector();
-        Row.addElement("Text 2");
-        Row.addElement(456);
-        Row.addElement(false);
-        Row.addElement(Color.red);
-        Row.addElement(new Photo("2.jpg"));
-        Table.addElement(Row);
+        ArrayList<Vector> rows = databaseHelper.getAllData();
+        
+        for (Vector row : rows) {
+            Table.addElement(row);
+        }
     }
     
     public Object getData(int rIndex, int cIndex) {
