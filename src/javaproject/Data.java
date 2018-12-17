@@ -20,9 +20,9 @@ public class Data {
         Row = new Vector();
         Row.addElement("Text 1");
         Row.addElement(123);
-        Row.addElement(true);
+        Row.addElement(true);        
         Row.addElement(Color.lightGray);
-        Row.addElement(new Photo("blue.jpg"));
+        Row.addElement(new Photo("1.jpg"));
         Table.addElement(Row);
         
         Row = new Vector();
@@ -30,7 +30,7 @@ public class Data {
         Row.addElement(456);
         Row.addElement(false);
         Row.addElement(Color.red);
-        Row.addElement(new Photo("pink.jpg"));
+        Row.addElement(new Photo("2.jpg"));
         Table.addElement(Row);
     }
     

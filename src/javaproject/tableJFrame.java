@@ -8,6 +8,7 @@ package javaproject;
 import javaproject.renderers.CustomRenderer;
 import java.awt.Color;
 import javaproject.connection.Azure;
+import javaproject.connection.DatabaseConnection;
 import javaproject.editors.ColorEditor;
 import javaproject.editors.PhotoEditor;
 import javax.swing.table.TableModel;
@@ -43,7 +44,7 @@ public class tableJFrame extends javax.swing.JFrame {
        String username = "r0663911";
        String password = "LcDY9A3u8Fx3fym9JUjVJWpLchQqar";
        
-       Azure azure = new Azure();
+        DatabaseConnection databaseConnection = new DatabaseConnection();
     }
 
     /**
